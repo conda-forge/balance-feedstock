@@ -35,6 +35,9 @@ requirements:
     - scipy <=1.9.2
     - session-info
     - statsmodels
+    
+    # These dependencies are needed even though not listed in setup files
+    - glmnet_python
 
 test:
   source_files:
