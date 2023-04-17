@@ -1,5 +1,5 @@
 {% set name = "balance" %}
-{% set version = "0.2.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/facebookresearch/balance/archive/{{ version }}.tar.gz
-  sha256: 9c46de5590ca53bef78530e2805ee67614bf3b10ac08d41b532ffc77164de20f
+  sha256: 240a3c90a10edd27129287b916976b19a67513357149578370d74caad101919f
 
 build:
   noarch: python
