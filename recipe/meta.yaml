@@ -37,7 +37,7 @@ requirements:
     - statsmodels
     
     # These dependencies are needed even though not listed in setup files
-    - glmnet_python
+    - glmnet_py
 
 test:
   source_files:
