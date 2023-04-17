@@ -1,5 +1,5 @@
 {% set name = "balance" %}
-{% set version = "0.2.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/facebookresearch/balance/archive/{{ version }}.tar.gz
-  sha256: 9c46de5590ca53bef78530e2805ee67614bf3b10ac08d41b532ffc77164de20f
+  sha256: 240a3c90a10edd27129287b916976b19a67513357149578370d74caad101919f
 
 build:
   noarch: python
@@ -22,7 +22,6 @@ requirements:
     - setuptools-scm
     - python >=3.7
   run:
-    - glmnet_py
     - ipfn
     - ipython
     - matplotlib-base
@@ -33,8 +32,12 @@ requirements:
     - python >=3.7
     - seaborn <=0.11.1
     - scikit-learn
-    - scipy <=1.8.1
+    - scipy <=1.9.2
+    - session-info
     - statsmodels
+    
+    # These dependencies are needed even though not listed in setup files
+    - glmnet_py
 
 test:
   source_files:
