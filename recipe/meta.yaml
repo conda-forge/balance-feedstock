@@ -1,5 +1,5 @@
 {% set name = "balance" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/facebookresearch/balance/archive/{{ version }}.tar.gz
-  sha256: 240a3c90a10edd27129287b916976b19a67513357149578370d74caad101919f
+  sha256: 09c379ff978e210ce6506de46d4e949aecd52eb5e14e26c8b1c38feb7a32af10
 
 build:
   noarch: python
@@ -35,7 +35,7 @@ requirements:
     - scipy <=1.9.2
     - session-info
     - statsmodels
-    
+
     # These dependencies are needed even though not listed in setup files
     - glmnet_py
 
