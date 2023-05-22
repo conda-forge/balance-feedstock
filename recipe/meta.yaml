@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/facebookresearch/balance/archive/{{ version }}.tar.gz
-  sha256: 5d4a6cf7f123301ca8656b58be266075df372949be0e8eca8cc13a528f842a99
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 89b1eda6e55c823cf821543c79d7079239cd3a2e8cb63ffe619b991d90683570
 
 build:
   noarch: python
