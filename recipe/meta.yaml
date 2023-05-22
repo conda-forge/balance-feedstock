@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/facebookresearch/balance/archive/{{ version }}.tar.gz
-  sha256: f84f36a789626b470bfa589f040d0ea43664ba4806761afdf09215f869fddd0d
+  sha256: 5d4a6cf7f123301ca8656b58be266075df372949be0e8eca8cc13a528f842a99
 
 build:
   noarch: python
