@@ -1,5 +1,5 @@
 {% set name = "balance" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aa760bbe0e0f35920590c45c66b3c80190866d3e7fdfb0c47a2b3e885fd406e2
+  sha256: d993549b380c6910613d3f19c32d2b6d3247eedd3ea0e1ff2680627869c9cd9e
 
 build:
   noarch: python
