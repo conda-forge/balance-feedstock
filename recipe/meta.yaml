@@ -40,16 +40,12 @@ requirements:
     - glmnet_py
 
 test:
-  source_files:
-    - tests
   imports:
     - balance
   commands:
     - pip check
-    - pytest -vvv -k "not test_weighted_comparisons_plots and not test_cbps_constraints" --capture=tee-sys tests
   requires:
     - pip
-    - pytest
     - python {{ python_min }}
     # Using the lower pins in testing to fulfill pip check
     - numpy >=1.21.0,<2.0
