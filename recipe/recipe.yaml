@@ -24,7 +24,7 @@ requirements:
   host:
     - pip
     - setuptools-scm
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools
   run:
     - python >=${{ python_min }}
@@ -50,7 +50,7 @@ tests:
   - requirements:
       run:
         - pip
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
         # Using the lower pins in testing to fulfill pip check
         - numpy >=1.21.0,<2.0
         - scikit-learn >=1.0.0,<1.4.0
