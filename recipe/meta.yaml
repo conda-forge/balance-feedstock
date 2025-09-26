@@ -24,16 +24,16 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - numpy
-    - pandas <=2.0.3
+    - numpy >=1.21.0,<2.1
+    - pandas >=1.5.0,<2.4.0
+    - scipy >=1.7.0,<1.14.0
+    - scikit-learn >=1.0.0,<1.5.0
     - ipython
-    - scipy <=1.10.1
     - patsy
     - seaborn
     - plotly
     - matplotlib-base
     - statsmodels
-    - scikit-learn <=1.2.2
     - ipfn
     - session-info
     # These dependencies are needed even though not listed in setup files
@@ -50,6 +50,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://import-balance.org/
