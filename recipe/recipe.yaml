@@ -1,0 +1,70 @@
+schema_version: 1
+
+context:
+  name: balance
+  version: 0.11.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: d993549b380c6910613d3f19c32d2b6d3247eedd3ea0e1ff2680627869c9cd9e
+
+build:
+  number: 0
+  noarch: python
+  script:
+    env:
+      SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
+    content: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - setuptools-scm
+    - python ${{ python_min }}
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - numpy >=1.21.0,<2.1
+    - pandas >=1.5.0,<2.4.0
+    - scipy >=1.7.0,<1.14.0
+    - scikit-learn >=1.0.0,<1.5.0
+    - ipython
+    - patsy
+    - seaborn
+    - plotly
+    - matplotlib-base
+    - statsmodels
+    - ipfn
+    - session-info
+    # These dependencies are needed even though not listed in setup files
+    - glmnet_py
+
+tests:
+  - python:
+      imports:
+        - balance
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}
+        # Using the lower pins in testing to fulfill pip check
+        - numpy >=1.21.0,<2.0
+        - scikit-learn >=1.0.0,<1.4.0
+    script:
+      - pip check
+
+about:
+  summary: Simple workflow and methods for dealing with biased data.
+  license: GPL-2.0-only
+  license_file:
+    - LICENSE
+  homepage: https://import-balance.org/
+  repository: https://github.com/facebookresearch/balance
+
+extra:
+  recipe-maintainers:
+    - thewchan
