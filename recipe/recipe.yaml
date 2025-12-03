@@ -38,7 +38,6 @@ requirements:
     - plotly
     - matplotlib-base
     - statsmodels
-    - ipfn
     - session-info
     # These dependencies are needed even though not listed in setup files
     - glmnet_py
