@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: balance
-  version: "0.15.0"
+  version: "0.16.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 38a594aa041009929eb00611ed0222624d76e5d54ddf1f2d6d1b087070eb9b02
+  sha256: 9822f2229fd88633cd15f23c5c3cb928bc88a91f3006c41b158156d8caa12fcc
 
 build:
   number: 0
@@ -30,10 +30,10 @@ requirements:
     - wheel
   run:
     - python >=${{ python_min }}
-    - numpy >=1.21.0
-    - pandas >=1.5.0
-    - scipy >=1.7.0
-    - scikit-learn >=1.0.0
+    - numpy >=1.21.0,<2.0
+    - pandas >=1.5.0,<4.0.0
+    - scipy >=1.7.0,<1.14.0
+    - scikit-learn >=1.0.0,<1.4.0
     - ipython
     - patsy
     - seaborn
