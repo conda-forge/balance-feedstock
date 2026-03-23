@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: balance
-  version: "0.16.0"
+  version: "0.17.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 9822f2229fd88633cd15f23c5c3cb928bc88a91f3006c41b158156d8caa12fcc
+  sha256: bee8de795b739e4f6d8c70c17e13f96d6ab61d7982384607a8735982d88d26d0
 
 build:
   number: 0
