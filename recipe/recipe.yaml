@@ -48,6 +48,9 @@ tests:
   - python:
       imports:
         - balance
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
